@@ -61,7 +61,7 @@
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-started-mail</artifactId>
+			<artifactId>spring-boot-starter-mail</artifactId>
 		</dependency>
 
     </dependencies>

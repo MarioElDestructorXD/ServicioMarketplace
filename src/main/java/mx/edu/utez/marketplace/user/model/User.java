@@ -16,7 +16,7 @@ public class User {
     private String username;
     @JsonIgnore
     private String password;
-    @OneToOne
+    @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.PERSIST)
     @JoinColumn(name = "person_id")
     private Person person;
     @ManyToMany(mappedBy = "users")

@@ -37,9 +37,6 @@ public class UserService {
            return new ResponseEntity<>(new Message("La persona ya cuenta con un usuario",true, null),
                    HttpStatus.BAD_REQUEST);
 
-       Person personTemp = user.getPerson();
-       personTemp = personRepository.saveAndFlush(personTemp);
-       user.setPerson(personTemp);
        return new ResponseEntity<>(new Message("ok",false, userRepository.saveAndFlush(user)),
                HttpStatus.OK);
 

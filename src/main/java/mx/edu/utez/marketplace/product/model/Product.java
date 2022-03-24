@@ -25,7 +25,7 @@ public class Product {
     @JoinColumn(name = "subcategory_id")
     private Subcategory subcategory;
 
-    @OneToMany(mappedBy = "product")
+    @OneToMany(mappedBy = "product", fetch = FetchType.EAGER, cascade = CascadeType.PERSIST)
     private List<ProductImage> images;
 
     public Product(long id, String name, String description, double price, int queality, String brand, Status status, Subcategory subcategory, List<ProductImage> images) {
